@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  app:
+    image: babelcoder/cy-k6-assets:v0.2
+    ports:
+      - 3000:3000
+    environment:
+      - NUXT_DATABASE_URL=postgresql://myapp:mypassword@db/absence-management?schema=public
+      - NUXT_ACCESS_TOKEN_EXPIRES_IN=90d
+      - NUXT_ACCESS_TOKEN_SECRET_KEY=5f834cf2-46ce-4e1f-9204-5a22d3f7a63b
+  db:
+    image: 'postgres:15.3-alpine3.18'
+    ports:
+      - 9113:5432
+    environment:
+      POSTGRES_USER: myapp
+      POSTGRES_PASSWORD: mypassword
