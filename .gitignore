@@ -1,3 +1,4 @@
 node_modules
 br
 node_modules
+.env

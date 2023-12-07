@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@babelcoder.com",
+    "password": "42E00951-6EFF-401A-9F39-F0CA58F0447E",
+    "role": "ADMIN",
+    "image": "https://picsum.photos/200"
+  }
+]

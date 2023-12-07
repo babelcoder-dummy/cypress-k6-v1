@@ -1,10 +1,17 @@
 import { defineConfig } from 'cypress'
+import * as db from './cypress/support/db/helpers'
+import * as users from './cypress/support/db/users'
+import * as articles from './cypress/support/db/articles'
 
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000',
-    setupNodeEvents(_on, _config) {
-      // implement node event listeners here
+    setupNodeEvents(on, _config) {
+      on('task', {
+        'db:reset': db.reset,
+        'db:users:bulk-insert': users.bulkInsert,
+        'db:articles:bulk-insert': articles.bulkInsert,
+      })
     },
   },
 })
