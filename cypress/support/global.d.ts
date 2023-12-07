@@ -13,6 +13,7 @@ declare global {
       task(event: 'db:reset'): Chainable<null>
       task(event: 'db:articles:bulk-insert', args: Article[]): Chainable<null>
       task(event: 'db:users:bulk-insert', args: User[]): Chainable<null>
+      task<T>(event: 'xlsx-to-json', args: string): Chainable<T>
     }
   }
 }

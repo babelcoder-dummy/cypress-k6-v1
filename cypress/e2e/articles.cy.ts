@@ -6,8 +6,7 @@ describe('Articles', () => {
   beforeEach(() => {
     cy.task('db:reset')
 
-    cy.fixture<User[]>('users/all.json')
-    cy.fixture<User[]>('users/all.json').then((users) => {
+    cy.task<User[]>('xlsx-to-json', 'users/all.xlsx').then((users) => {
       cy.task('db:users:bulk-insert', users)
 
       cy.fixture<Article[]>('articles/all.json').then((loadedArticles) => {
