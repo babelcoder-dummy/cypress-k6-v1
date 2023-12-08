@@ -24,7 +24,7 @@ describe('Articles', () => {
       const card = cy.dataCy(`article-item-${article.id}`)
 
       card.within(() => {
-        cy.dataCy('page-title').should('have.text', article.title)
+        cy.dataCy('title').should('have.text', article.title)
         cy.dataCy('image').should('have.attr', 'src', article.image)
         cy.dataCy('excerpt').should('have.text', article.excerpt)
       })

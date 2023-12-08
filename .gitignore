@@ -2,3 +2,6 @@ node_modules
 br
 node_modules
 .env
+
+cypress/videos
+cypress/screenshots

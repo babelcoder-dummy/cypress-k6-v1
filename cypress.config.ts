@@ -6,6 +6,7 @@ import * as xlsx from './cypress/support/xlsx'
 
 export default defineConfig({
   retries: 3,
+  video: true,
   e2e: {
     baseUrl: 'http://localhost:3000',
     setupNodeEvents(on, _config) {

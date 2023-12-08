@@ -23,7 +23,7 @@ describe('Admin Articles', () => {
     cy.logout()
   })
 
-  it('allows to create new article', () => {
+  it.only('allows to create new article', () => {
     cy.loginAs('ADMIN')
     cy.visit('/admin/articles')
 

@@ -11,7 +11,9 @@ describe('Auth', () => {
     cy.task('xlsx-to-json', 'users/all.xlsx').then((users: User[]) => {
       for (const user of users) {
         cy.visit('/auth/register')
+
         cy.dataCy('title').should('have.text', 'Register')
+        cy.wait(500)
         cy.dataCy('name').type(user.name)
         cy.dataCy('email').type(user.email)
         cy.dataCy('password').type(user.password)
