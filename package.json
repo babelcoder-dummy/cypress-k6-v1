@@ -12,15 +12,17 @@
     "lint:fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "xlsx": "^0.18.5"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.3.4",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^2.4.3",
     "cypress": "^13.6.1",
     "eslint": "^8.55.0",
     "prisma": "^5.7.0",
     "typescript": "^5.3.2"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.7.0",
-    "xlsx": "^0.18.5"
   }
 }
