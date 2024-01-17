@@ -3,8 +3,10 @@ import type { Article, Role, User } from '@prisma/client'
 declare global {
   namespace Cypress {
     interface Chainable {
+      aliases<T>(keys: string[]): Chainable<T>
       dataCy(value: string): Chainable<JQuery<HTMLElement>>
       loginAs(role: Role): Chainable<unknown>
+      loginApiAs(role: Role): Chainable<string>
       logout(): Chainable<unknown>
       containArticles(value: {
         id: number

@@ -1,14 +1,14 @@
 [
   {
     "title": "Title#1",
-    "slug": "title-1",
+    "slug": "title1",
     "excerpt": "Excerpt#1",
     "content": "Content#1",
     "image": "cypress/fixtures/articles/image.jpg"
   },
   {
     "title": "Title#2",
-    "slug": "title-2",
+    "slug": "title2",
     "excerpt": "Excerpt#2",
     "content": "Content#2",
     "image": "cypress/fixtures/articles/image.jpg"
